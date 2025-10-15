@@ -322,7 +322,7 @@ export default function PartnerApplyPage() {
       <div className="w-full max-w-2xl mx-auto p-4">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-xl">서비스 제공사 신청</CardTitle>
+            <CardTitle className="text-center text-xl">파트너사 신청</CardTitle>
             <p className="text-center text-sm text-muted-foreground">
               파트너사 등록을 위한 정보를 입력해주세요
             </p>
@@ -353,7 +353,7 @@ export default function PartnerApplyPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">사업자번호 *</label>
+                    <label className="text-sm font-medium">사업자 번호 *</label>
                     <Input
                       placeholder="000-00-00000"
                       value={businessNumber}
@@ -434,13 +434,13 @@ export default function PartnerApplyPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">비용 *</label>
+                    <label className="text-sm font-medium">이용 플랜 *</label>
                     <Select value={pricingPlan} onValueChange={(value) => {
                       setPricingPlan(value)
                       if (fieldErrors.pricingPlan) clearFieldError("pricingPlan")
                     }}>
                       <SelectTrigger className={fieldErrors.pricingPlan ? "border-red-500" : ""}>
-                        <SelectValue placeholder="비용 계획을 선택하세요" />
+                        <SelectValue placeholder="이용 플랜을 선택하세요" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="free">무료</SelectItem>
